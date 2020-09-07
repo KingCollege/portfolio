@@ -1,5 +1,7 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import Layout from './Layout';
+import AboutMe from './about_me/AboutMe';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -14,21 +16,21 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-const GridContainer = styled.div`
-    position: absolute;
-    display: grid;
-    grid-template-rows: 1fr 15fr;
-    width: 100%;
-    height: 100%;
-`;
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-function App() {
-    return (
-        <>
-            <GlobalStyle />
-            <GridContainer className="App">Welcome to my portfolio</GridContainer>
-        </>
-    );
+    render() {
+        return (
+            <>
+                <GlobalStyle />
+                <Layout>
+                    <AboutMe />
+                </Layout>
+            </>
+        );
+    }
 }
 
 export default App;

@@ -1,0 +1,12 @@
+{
+    "title-container": {
+        "background": "#FEE2E2",
+        "opacity": 50
+    },
+
+    "general-colors": {
+        "orange": "#F36161",
+        "grey": "#777777",
+        "black": "#454647"
+    }
+}
