@@ -2,66 +2,59 @@ import React from 'react';
 import styled from 'styled-components';
 import design_preset from '../design_presets/presets.json';
 
-const TitleBackground = styled.div`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: ${design_preset['title-container'].background};
-    opacity: ${design_preset['title-container'].opacity}%;
-    z-index: -1;
-`;
-
 const Container = styled.div`
     position: relative;
     display: flex;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
     height: 100%;
-`;
-
-const ContainerContent = styled.div`
-    display: grid;
-    width: 100%;
-    height: 90%;
-    margin: auto;
-    margin-left: -100%;
-    grid-template-columns: 2fr 1fr;
 `;
 
 const AboutMeContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    margin-left: 40px;
+    height: auto;
+    width: 700px;
+    margin: auto;
 `;
 
-const Name = styled.p`
-    color: ${design_preset['general-colors'].orange};
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 0;
-`;
-
-const Occupation = styled.p`
-    color: ${design_preset['general-colors'].grey};
-    font-size: 20px;
+const Welcome = styled.p`
+    position: relative;
+    color: ${design_preset['general-colors'].white};
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 10px;
 `;
 
 const Description = styled.p`
-    color: ${design_preset['general-colors'].grey};
-    font-size: 15px;
-    width: 80%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    color: ${design_preset['general-colors'].white};
+    font-size: 1rem;
 `;
 
-const Contact = styled.p`
-    color: ${design_preset['general-colors'].grey};
-    font-size: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
+const DownloadButton = styled.button`
+    background: transparent;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 2px solid white;
+    color: ${design_preset['general-colors'].blue};
+    border-radius: 15px;
+    font-weight: bold;
+    &:active {
+        outline: none;
+    }
+
+    &:hover {
+        background: white;
+        color: black;
+    }
+
+    &:focus {
+        outline: 0;
+    }
 `;
 
 class AboutMe extends React.Component {
@@ -72,24 +65,15 @@ class AboutMe extends React.Component {
     render() {
         return (
             <Container>
-                <TitleBackground />
-                <ContainerContent>
-                    <AboutMeContainer>
-                        <Name>MANDU SHI</Name>
-                        <Occupation>Software Developer</Occupation>
-                        <Description>
-                            ...I am a recent graduate with a Computer Science degree. I am passionate about anything
-                            related to programming and problem solving. To learn more about me feel free to contact me,
-                            or have a look at some of my projects. You can also find me on Github and LinkedIn.
-                        </Description>
-                        <Contact>
-                            <strong>email</strong>: mandushi.18@gmail.com
-                        </Contact>
-                        <Contact>
-                            <strong>phone</strong>: 07716045270
-                        </Contact>
-                    </AboutMeContainer>
-                </ContainerContent>
+                <AboutMeContainer>
+                    <Welcome>Welcome</Welcome>
+                    <Description>
+                        ...I am a recent graduate with a Computer Science degree. I am passionate about anything related
+                        to programming and problem solving. To learn more about me please visit my GitHub page, LinkedIn
+                        or have a look at some of projects ._
+                    </Description>
+                </AboutMeContainer>
+                <DownloadButton>DOWNLOAD CV</DownloadButton>
             </Container>
         );
     }

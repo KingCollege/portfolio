@@ -7,7 +7,7 @@ import Canvas from './animation/Canvas';
 const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "Nirmala UI", "Times New Roman", Times, serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -26,10 +26,8 @@ class App extends React.Component {
         return (
             <>
                 <GlobalStyle />
-                <Canvas />
-                <Layout>
-                    <AboutMe />
-                </Layout>
+                {/* <Canvas /> */}
+                <Layout></Layout>
             </>
         );
     }

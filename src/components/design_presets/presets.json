@@ -1,12 +1,14 @@
 {
     "title-container": {
-        "background": "#FEE2E2",
+        "background": "#ffffff",
         "opacity": 50
     },
 
     "general-colors": {
         "orange": "#F36161",
         "grey": "#777777",
-        "black": "#454647"
+        "black": "#454647",
+        "white": "#ffffff",
+        "blue": "#6197F3"
     }
 }
