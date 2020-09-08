@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Layout from './Layout';
 import AboutMe from './about_me/AboutMe';
+import Canvas from './animation/Canvas';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -25,6 +26,7 @@ class App extends React.Component {
         return (
             <>
                 <GlobalStyle />
+                <Canvas />
                 <Layout>
                     <AboutMe />
                 </Layout>
