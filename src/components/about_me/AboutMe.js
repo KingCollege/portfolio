@@ -72,8 +72,8 @@ class AboutMe extends React.Component {
                         to programming and problem solving. To learn more about me please visit my GitHub page, LinkedIn
                         or have a look at some of projects ._
                     </Description>
+                    <DownloadButton>DOWNLOAD CV</DownloadButton>
                 </AboutMeContainer>
-                <DownloadButton>DOWNLOAD CV</DownloadButton>
             </Container>
         );
     }

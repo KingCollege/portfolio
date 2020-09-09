@@ -1,8 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Layout from './Layout';
-import AboutMe from './about_me/AboutMe';
-import Canvas from './animation/Canvas';
+import MyProjects from '../components/about_me/MyProjects';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -10,6 +9,20 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Nirmala UI", "Times New Roman", Times, serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+         scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }   
+
+    p, a, button {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none; 
     }
 
     code {
@@ -26,8 +39,9 @@ class App extends React.Component {
         return (
             <>
                 <GlobalStyle />
-                {/* <Canvas /> */}
-                <Layout></Layout>
+                <Layout>
+                    <MyProjects />
+                </Layout>
             </>
         );
     }

@@ -6,8 +6,8 @@ import BackgroundImage from '../assets/Background.jpg';
 
 const GridContainer = styled.div`
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 800px 1fr;
     width: 100%;
     height: 100%;
 `;
@@ -24,19 +24,9 @@ const GridHeader = styled.div`
     grid-template-rows: 80px 1fr;
     width: 100%;
     height: 100%;
-`;
-
-const ImageContainer = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -3;
-`;
-
-const Image = styled.img`
-    width: 100%;
+    background-image: url(${BackgroundImage});
+    background-size: cover;
+    background-position: center center;
 `;
 
 class Layout extends React.Component {
@@ -47,10 +37,6 @@ class Layout extends React.Component {
     render() {
         return (
             <GridContainer>
-                <ImageContainer>
-                    <Image src={BackgroundImage} />
-                </ImageContainer>
-
                 <GridHeader>
                     <NavBar />
                     <AboutMe />
