@@ -24,7 +24,11 @@
         <title>MANDU</title>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <script type="module" src="/pwabuilder-sw.ts"></script>
+
+        <script>
+            navigator.serviceWorker.register("/pwabuilder-sw.js");
+        </script>
         <div id="root"></div>
     </body>
 </html>
