@@ -68,9 +68,10 @@ class AboutMe extends React.Component {
                 <AboutMeContainer>
                     <Welcome>Welcome</Welcome>
                     <Description>
-                        ...I am a recent graduate with a Computer Science degree. I am passionate about anything related
-                        to programming and problem solving. To learn more about me please visit my GitHub page, LinkedIn
-                        or have a look at some of projects ._
+                        Ut volutpat, nunc at efficitur hendrerit, ipsum enim tincidunt metus, a hendrerit magna nisi et tellus. 
+                        Pellentesque malesuada turpis non nisi sodales mattis et ut tortor. Aliquam luctus dolor eu nibh convallis, 
+                        eget pulvinar quam tincidunt. Quisque nec urna et diam pretium pellentesque ac et nulla. Phasellus mauris justo, 
+                        aliquet sed diam at, viverra ullamcorper purus. 
                     </Description>
                     <DownloadButton>DOWNLOAD CV</DownloadButton>
                 </AboutMeContainer>
